@@ -1,1 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noah Raybuck – CS Student & Developer</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a href="#home" class="logo">Noah<span class="accent">.</span></a>
+        <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
+    <main>
+      <!-- Hero / Home -->
+      <section id="home" class="hero">
+        <h1>Hi, I'm <span class="accent">Noah Raybuck</span></h1>
+        <p>CS student, robotics tinkerer, and tennis coach who loves turning ideas into code.</p>
+        <a href="#projects" class="btn-primary">View My Work</a>
+      </section>
+
+      <!-- About Me -->
+      <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>
+          I'm a Computer Science major at SNHU with a passion for robotics, web
+          development, and trading card games. When I'm not coding, you'll find
+          me coaching high‑school tennis or testing new 3D‑printed parts for my
+          card‑sorting robot.
+        </p>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="section">
+        <h2>Skills</h2>
+        <ul class="skills-grid">
+          <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>C++</li><li>Python</li><li>React</li><li>AWS</li><li>Docker</li><li>Arduino</li>
+        </ul>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Project cards injected via HTML or JS -->
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section contact-section">
+        <h2>Contact</h2>
+        <form id="contactForm" action="https://formspree.io/f/your-id" method="POST">
+          <label>
+            Name
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button type="submit" class="btn-primary">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <span id="year"></span> Noah Raybuck. Built with ♥ using pure HTML, CSS, and JavaScript.</p>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
