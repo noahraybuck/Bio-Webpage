@@ -1,2 +1,2 @@
-# Resume Website
-A webpage where I can both build my resume and show of some of my skills as a developer.
+# Noah Raybuck – Personal Portfolio Website
+This is a personal portfolio site built with pure HTML, CSS, and JavaScript to showcase my skills, projects, and résumé as a Computer Science student. It serves as a central hub for potential employers and collaborators to learn more about my background, view my work, and get in touch.
