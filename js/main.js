@@ -19,7 +19,6 @@ themeToggle.addEventListener('click', () => {
 const yearSpan = document.getElementById('year');
 if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
-// Example Projects Array (extend as needed)
 const projects = [
   {
     title: 'Tournament Manager App',
@@ -39,8 +38,18 @@ const projects = [
   }
 ];
 
-const projectsGrid = document.getElementById('projectsGrid');
+const schoolProjects = [
+  {
+    title: 'Full Stack Development',
+    image: 'images/full-stack.png',
+    description: 'Used various tools in order to create and manage a web application from front to back.',
+    tech: ['AWS', 'Postman', 'MongoDB'],
+    github: 'https://github.com/Noah-Raybuck/cs465-fullstack',
+    demo: '#'
+  }
+];
 
+// --- Card Factory ---------------------------------------------------
 function createProjectCard(project) {
   const card = document.createElement('article');
   card.className = 'project-card';
@@ -51,10 +60,22 @@ function createProjectCard(project) {
       <p>${project.description}</p>
       <p><strong>Tech:</strong> ${project.tech.join(', ')}</p>
       <a href="${project.github}" target="_blank" rel="noopener">GitHub</a>
-      ${project.demo !== '#' ? ` | <a href="${project.demo}" target="_blank" rel="noopener">Live Demo</a>` : ''}
+      ${project.demo && project.demo !== '#' ? ` | <a href="${project.demo}" target="_blank" rel="noopener">Live Demo</a>` : ''}
     </div>
   `;
   return card;
 }
 
-projects.forEach(p => projectsGrid.appendChild(createProjectCard(p)));
+// --- Render Helpers -------------------------------------------------
+function renderProjectGrid(list, containerId) {
+  const container = document.getElementById(containerId);
+  if (!container) return; // Fail‑soft if the container is missing
+
+  const fragment = document.createDocumentFragment();
+  list.forEach(p => fragment.appendChild(createProjectCard(p)));
+  container.appendChild(fragment);
+}
+
+// --- Bootstrap ------------------------------------------------------
+renderProjectGrid(projects, 'projectsGrid');
+renderProjectGrid(schoolProjects, 'schoolProjectsGrid');

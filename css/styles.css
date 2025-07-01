@@ -8,10 +8,10 @@
 }
 
 .dark {
-  --bg: #181818;
+  --bg: #202020;
   --text: #e2e2e2;
   --accent: #6c63ff;
-  --bg-secondary: #242424;
+  --bg-secondary: #515151;
 }
 
 * {
@@ -51,7 +51,7 @@ h1, h2 {
 
 /* Header */
 .site-header {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0);
   backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
