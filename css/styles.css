@@ -39,6 +39,7 @@ img, picture, svg {
   padding: 4rem 1rem;
   max-width: 1000px;
   margin: 0 auto;
+  text-align: center;
 }
 
 h1, h2 {
@@ -106,7 +107,7 @@ h1, h2 {
 .btn-primary {
   background: var(--accent);
   color: #fff;
-  padding: 0.75rem 1.5rem;
+  padding: .75rem 1.5rem;
   border-radius: 999px;
   border: none;
   font-size: 1rem;
