@@ -4,14 +4,14 @@
   --text: #1a1a1a;
   --accent: #6c63ff;
   --bg-secondary: #f2f2f2;
-  --transition: 0.3s ease;
+  --transition: 0.5s ease;
 }
 
 .dark {
   --bg: #202020;
   --text: #e2e2e2;
   --accent: #6c63ff;
-  --bg-secondary: #515151;
+  --bg-secondary: #979797;
 }
 
 * {
@@ -197,5 +197,39 @@ footer {
 @media (max-width: 600px) {
   .nav-links {
     display: none; /* simple: hide for now; TBD: mobile menu */
+  }
+}
+
+/* ===== Collage background ===== */
+.bg-collage {
+  position: relative;
+  isolation: isolate;           
+  overflow: hidden;
+}
+
+.bg-collage::before {
+  content: "";
+  position: absolute;
+  inset: 0;                     
+  background: url("../images/Collage.png") center/cover no-repeat;
+  opacity: 0.75;                
+  filter: blur(3px);
+  z-index: -1;                  
+}
+
+
+.bg-collage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--bg);        
+  opacity: 0.75;                 
+  z-index: -1;
+}
+
+@media (max-width: 500px) {
+  .bg-collage::before,
+  .bg-collage::after {
+    display: none;
   }
 }
